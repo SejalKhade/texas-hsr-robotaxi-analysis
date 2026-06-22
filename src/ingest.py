@@ -5,9 +5,7 @@ Each function loads a raw file and returns a clean DataFrame.
 
 import warnings
 import pandas as pd
-import numpy as np
 import duckdb
-from pathlib import Path
 
 from src.config import FILES, DB_PATH, CITY_POP_FALLBACK
 
@@ -145,7 +143,8 @@ def write_to_db(
     conn.execute("CREATE TABLE scenario_results    AS SELECT * FROM results")
     conn.execute("CREATE TABLE monte_carlo_results AS SELECT * FROM mc_results")
 
-    ef_df = pd.DataFrame([ef])
+    ef_df = pd.DataFrame([ef])  # noqa: F841
+    conn.register("ef_df", ef_df)
     conn.execute("CREATE TABLE emission_factors AS SELECT * FROM ef_df")
 
     conn.close()

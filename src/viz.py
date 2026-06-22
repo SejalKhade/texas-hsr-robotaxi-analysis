@@ -6,7 +6,6 @@ All functions return Plotly figures.
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
-import numpy as np
 
 
 def mode_shift_bar(results: pd.DataFrame) -> go.Figure:

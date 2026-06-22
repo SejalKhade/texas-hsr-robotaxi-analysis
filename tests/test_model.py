@@ -5,7 +5,6 @@ Run with: pytest tests/ -v
 
 import pytest
 import pandas as pd
-import numpy as np
 from src.model import allocate_riders, add_energy_emissions, run_scenario, run_all_scenarios, monte_carlo
 from src.transform import normalize_series
 

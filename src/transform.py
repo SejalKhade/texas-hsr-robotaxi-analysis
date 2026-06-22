@@ -3,9 +3,8 @@ Data transformation — cleaning, feature engineering, route baseline builder.
 All functions: DataFrame in → DataFrame out.
 """
 
-import numpy as np
 import pandas as pd
-from src.config import ROUTES, GRAVITY_WEIGHTS, CITY_POP_FALLBACK
+from src.config import ROUTES, CITY_POP_FALLBACK
 
 
 def normalize_series(s: pd.Series) -> pd.Series:
