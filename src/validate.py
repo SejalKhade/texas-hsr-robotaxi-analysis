@@ -4,7 +4,6 @@ Call these functions before running the model to catch bad data early.
 """
 
 import pandas as pd
-import pandera.pandas as pa
 from pandera.pandas import Column, DataFrameSchema, Check
 
 
